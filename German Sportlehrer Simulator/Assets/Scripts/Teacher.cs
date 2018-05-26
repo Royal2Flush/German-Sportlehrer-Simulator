@@ -10,6 +10,10 @@ public class Teacher : MonoBehaviour {
     float throwTreshold = 30f;
     public GameObject ball;
 
+	// Path ball stuf
+	public GameObject PathBall;
+	private float lastPathSpawn = 0.0f;
+
     Rigidbody ballRigid;
 
 
@@ -64,6 +68,15 @@ public class Teacher : MonoBehaviour {
 
             throwIntensity = 0;
         }
+
+		if (Time.time - lastPathSpawn > 0.1f) {
+
+			GameObject ball = Instantiate(PathBall, transform.position, Quaternion.identity);
+			ball.transform.rotation = this.gameObject.transform.rotation;
+			ball.GetComponent<Rigidbody> ().AddForce (ball.transform.forward * throwIntensity, ForceMode.Impulse);
+
+			lastPathSpawn = Time.time;
+		}
 
 		
 	}
