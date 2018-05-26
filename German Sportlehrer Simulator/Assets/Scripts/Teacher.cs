@@ -42,7 +42,6 @@ public class Teacher : MonoBehaviour {
 
         this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, rotateAmount/2, this.transform.eulerAngles.z);
 
-        Debug.Log(throwIntensity);
 
         CalcThrowIntensity();
 

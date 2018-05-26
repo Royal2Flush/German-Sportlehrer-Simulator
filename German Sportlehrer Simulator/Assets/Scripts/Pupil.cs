@@ -15,8 +15,16 @@ public class Pupil : Person {
         
     }
 
-    public override void OnHit()
-    {
+	public override void OnHit(int damage)
+	{
+		Debug.Log (damage);
+
+		if (damage == 0) {
+			return;
+		}
+
+		UIManager.Instance.AddPoints (damage);
+
         if (state == PersonState.sleeping)
         {
             Debug.Log("+1 point");
@@ -65,5 +73,4 @@ public class Pupil : Person {
     {
         timerToStateChange = Random.Range(IDLE_MIN, IDLE_MAX);
     }
-
 }

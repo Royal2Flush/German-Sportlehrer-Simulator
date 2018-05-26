@@ -6,7 +6,7 @@ public class Parent : Person
 {
     public float movementSpeed;
 
-    public override void OnHit()
+	public override void OnHit(int damage)
     {
         throw new System.NotImplementedException();
     }
