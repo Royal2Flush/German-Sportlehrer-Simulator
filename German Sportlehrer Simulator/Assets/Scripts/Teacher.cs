@@ -32,7 +32,7 @@ public class Teacher : MonoBehaviour {
 
 
         float mousePosX = Input.mousePosition.x;
-        float mousePosY = Input.mousePosition.y;
+        float mousePosY = Screen.height - Input.mousePosition.y;
 
         float onePercentX = Screen.width / 100;
         float mousePosXInPercent = mousePosX / onePercentX;
@@ -51,16 +51,16 @@ public class Teacher : MonoBehaviour {
 
         CalcThrowIntensity();
 
+        Vector3 forceVector = transform.forward * throwIntensity;
+        Quaternion rotation = Quaternion.Euler(verticalThrowAngle, 0, 0);
+        forceVector = rotation * forceVector;
+
         if (Input.GetMouseButtonUp(0))
         {
             //throw ball
             GameObject ThrowBall = Resources.Load<GameObject>("throwBall") as GameObject;
             ThrowBall.transform.position = ball.transform.position;
             ThrowBall.transform.rotation = transform.rotation;
-
-            Vector3 forceVector = transform.forward * throwIntensity;
-            Quaternion rotation = Quaternion.Euler(verticalThrowAngle, 0, 0);
-            forceVector = rotation * forceVector;
 
             GameObject newBall = Instantiate(ThrowBall);
             ballRigid = newBall.GetComponent<Rigidbody>();
@@ -73,7 +73,7 @@ public class Teacher : MonoBehaviour {
 
 			GameObject ball = Instantiate(PathBall, transform.position, Quaternion.identity);
 			ball.transform.rotation = this.gameObject.transform.rotation;
-			ball.GetComponent<Rigidbody> ().AddForce (ball.transform.forward * throwIntensity, ForceMode.Impulse);
+			ball.GetComponent<Rigidbody> ().AddForce (forceVector, ForceMode.Impulse);
 
 			lastPathSpawn = Time.time;
 		}
