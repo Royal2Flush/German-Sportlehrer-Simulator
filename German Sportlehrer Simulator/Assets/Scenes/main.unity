@@ -3925,6 +3925,7 @@ GameObject:
   - component: {fileID: 1302910866}
   - component: {fileID: 1302910865}
   - component: {fileID: 1302910864}
+  - component: {fileID: 1302910868}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3995,6 +3996,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 31.418001, y: 0, z: 0}
+--- !u!114 &1302910868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1302910863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bcfd9618fb9eaf4585892b4e404da57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numOfPupilsAtStart: 5
+  originalPupil: {fileID: 1430166063}
+  minTimeBetweenSpawns: 5
+  maxTimeBetweenSpawns: 20
 --- !u!1 &1308089711
 GameObject:
   m_ObjectHideFlags: 0
@@ -4348,6 +4364,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e4910f4c9631234f95be2979cfe0fc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGoal: {x: 0, y: 0, z: 0}
   movementSpeed: 2
 --- !u!65 &1430166064
 BoxCollider:
