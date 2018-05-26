@@ -6,9 +6,11 @@ public class BallBehaviour : MonoBehaviour {
 
 	private float timeOfFloorBounce = 0.0f;
 	private bool touchedWall = false;
+	private AudioSource audio;
 
 	// Use this for initialization
 	void Start () {
+		audio = this.GetComponent<AudioSource>();
 		
 	}
 	
@@ -23,6 +25,7 @@ public class BallBehaviour : MonoBehaviour {
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "Wall") {
 			touchedWall = true;
+			audio.Play();
 		}
 		else if (col.gameObject.tag == "Floor") {
 			timeOfFloorBounce = Time.time;

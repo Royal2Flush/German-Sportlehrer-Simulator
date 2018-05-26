@@ -48,11 +48,20 @@ public class Pupil : Person {
 
     protected override void UpdateIdle()
     {
+		Debug.Log ("Update idle");
         timerToStateChange -= Time.deltaTime;
         if (timerToStateChange < 0)
         {
-            SetMovementGoalAtRandom(movementSpeed);
-            state = PersonState.moving;
+			if (Random.value > 0.5f) {
+				SetMovementGoalAtRandom (movementSpeed);
+				state = PersonState.moving;
+				animator.SetTrigger ("IsAwake");
+			} else {
+				SetMovementGoalAtRandom (0);
+				state = PersonState.sleeping;
+				animator.SetTrigger ("IsSleeping");
+			}
+			Debug.Log (state);
         }
     }
 
