@@ -7,6 +7,7 @@ public enum PersonState { idle, moving, sleeping, hit }
 public abstract class Person : MonoBehaviour {
 
     protected PersonState state;
+    protected float timerToStateChange;
     private Vector3 currentGoal;
     private float currentMovementSpeed;
 
@@ -60,7 +61,7 @@ public abstract class Person : MonoBehaviour {
 
     public void SetMovementGoalAtRandom(float speed)
     {
-        SetMovementGoal(new Vector3(Random.Range(-5f, 5f), 0, Random.Range(0f, 5f)), speed);
+        SetMovementGoal(new Vector3(Random.Range(-5f, 5f), transform.position.y, Random.Range(0f, 5f)), speed);
     }
 
     protected void Move()
