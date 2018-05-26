@@ -25,6 +25,9 @@ public class BallBehaviour : MonoBehaviour {
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "Wall") {
 			touchedWall = true;
+            float boingpitch = Random.Range(0.9f, 1.2f);
+            Debug.Log(boingpitch);
+            audio.pitch = boingpitch;
 			audio.Play();
 		}
 		else if (col.gameObject.tag == "Floor") {
