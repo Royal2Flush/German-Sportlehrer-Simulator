@@ -9,7 +9,7 @@ public abstract class Person : MonoBehaviour {
     protected PersonState state;
     protected float timerToStateChange;
 	protected Animator animator;
-    private Vector3 currentGoal;
+    public Vector3 currentGoal;
     private float currentMovementSpeed;
 
     
@@ -61,12 +61,13 @@ public abstract class Person : MonoBehaviour {
 
     protected static Vector3 GetRandomVectorInMovementZone()
     {
-        const float X_MIN = -5;
-        const float X_MAX = 5;
-        const float Y_MIN = -5;
-        const float Y_MAX = 5;
-        const float Z_POS = 1;
-        Vector3 r = new Vector3(Random.Range(X_MIN, X_MAX), Random.Range(Y_MIN, Y_MAX), Z_POS);
+        const float X_MIN = -6;
+        const float X_MAX = 6;
+        const float Z_MIN = 0;
+        const float Z_MAX = 10;
+        const float Y_POS = 1.4f;
+        Vector3 r = new Vector3(Random.Range(X_MIN, X_MAX), Y_POS, Random.Range(Z_MIN, Z_MAX));
+        Debug.Log(r);
         return r;
     }
 
