@@ -27,16 +27,21 @@ public class Teacher : MonoBehaviour {
 
 
 
-        float mousePos = Input.mousePosition.x;
+        float mousePosX = Input.mousePosition.x;
+        float mousePosY = Input.mousePosition.y;
 
-        float onePercent = Screen.width / 100;
-        float mousePosInPercent = mousePos / onePercent;
+        float onePercentX = Screen.width / 100;
+        float mousePosXInPercent = mousePosX / onePercentX;
+
+        float onePercentY = Screen.height / 100;
+        float mousePosYInPercent = mousePosY / onePercentY;
 
         //0 is in the middle not buttom left
-        float rotateAmount = mousePosInPercent - 50;
+        float rotateAmountX = mousePosXInPercent - 50;
+        float verticalThrowAngle = mousePosYInPercent - 50;
         //Rote the Player in 50 degree
 
-        this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, rotateAmount/2, this.transform.eulerAngles.z);
+        this.transform.eulerAngles = new Vector3(this.transform.eulerAngles.x, rotateAmountX/2, this.transform.eulerAngles.z);
 
         Debug.Log(throwIntensity);
 
@@ -49,9 +54,13 @@ public class Teacher : MonoBehaviour {
             ThrowBall.transform.position = ball.transform.position;
             ThrowBall.transform.rotation = transform.rotation;
 
+            Vector3 forceVector = transform.forward * throwIntensity;
+            Quaternion rotation = Quaternion.Euler(verticalThrowAngle, 0, 0);
+            forceVector = rotation * forceVector;
+
             GameObject newBall = Instantiate(ThrowBall);
             ballRigid = newBall.GetComponent<Rigidbody>();
-            ballRigid.AddForce(transform.forward * throwIntensity,ForceMode.Impulse);
+            ballRigid.AddForce(forceVector,ForceMode.Impulse);
 
             throwIntensity = 0;
         }
