@@ -10,6 +10,13 @@ public class Pupil : Person {
     private const float IDLE_MIN = 0.5f;
     private const float IDLE_MAX = 2f;
 
+
+    AudioSource pupilAudio;
+
+
+
+
+
     protected override void SpecificUpdate()
     {
         
@@ -69,5 +76,31 @@ public class Pupil : Person {
     protected override void SetIdleTimer()
     {
         timerToStateChange = Random.Range(IDLE_MIN, IDLE_MAX);
+    }
+
+
+	private void OnCollisionEnter(Collision collision)
+	{
+		if(collision.gameObject.tag == "Ball")
+        {
+            playPupilAudio();
+
+        }
+	}
+
+
+	void playPupilAudio()
+    {
+        Debug.Log("getroffen");
+        pupilAudio = this.GetComponent<AudioSource>();
+
+        int audioindex = Random.Range(1, 6);
+
+        AudioClip clip = Resources.Load<AudioClip>("Sounds/schueler" + audioindex) as AudioClip;
+        Debug.Log("audio geladen");
+        pupilAudio.clip = clip;
+        pupilAudio.Play();
+        Debug.Log("audio gespielt");
+
     }
 }
