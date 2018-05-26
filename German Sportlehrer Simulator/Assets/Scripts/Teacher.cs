@@ -19,11 +19,15 @@ public class Teacher : MonoBehaviour {
 
     Rigidbody ballRigid;
 
+    AudioSource teacherAudio;
+
 
 
 	// Use this for initialization
 	void Start () {
 		animator = GetComponent<Animator> ();
+        teacherAudio = this.GetComponent<AudioSource>();
+
 	}
 	
 	// Update is called once per frame
@@ -69,6 +73,8 @@ public class Teacher : MonoBehaviour {
             ballRigid.AddForce(forceVector,ForceMode.Impulse);
 
             throwIntensity = 0;
+            stopTeacherLoadAudio();
+            playTeacherThrowAudio();
         }
 
 		if (Time.time - lastPathSpawn > 0.1f) {
@@ -94,6 +100,8 @@ public class Teacher : MonoBehaviour {
 				animator.SetTrigger ("IsAiming");
 				isPlayingAnimation = true;
 			}
+
+            playTeacherLoadAudio();
         }
 
         else{
@@ -107,8 +115,46 @@ public class Teacher : MonoBehaviour {
             //spiele anspamnnsound
 
         }
-            
 
+
+
+    }
+    void playTeacherLoadAudio()
+    {
+        //teacherAudio = this.GetComponent<AudioSource>();
+
+        if (!teacherAudio.isPlaying)
+        {
+
+
+            AudioClip clip = Resources.Load<AudioClip>("Sounds/ballload") as AudioClip;
+            teacherAudio.clip = clip;
+            teacherAudio.Play();
+        }
+
+    }
+
+    void stopTeacherLoadAudio()
+    {
+        if (teacherAudio.isPlaying)
+        {
+
+            teacherAudio.Stop();
+
+        }
+
+    }
+
+
+    void playTeacherThrowAudio()
+    {
+        //teacherAudio = this.GetComponent<AudioSource>();
+
+        int audioindex = Random.Range(1, 4);
+
+        AudioClip clip = Resources.Load<AudioClip>("Sounds/lehrer" + audioindex) as AudioClip;
+        teacherAudio.clip = clip;
+        teacherAudio.Play();
 
     }
 }
