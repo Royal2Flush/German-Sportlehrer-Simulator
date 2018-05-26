@@ -93,6 +93,9 @@ public class Pupil : Person {
 
     public override void Spawn()
     {
+		int index = Random.Range (0, 2);
+		Debug.Log (index);
+		transform.GetChild (index).gameObject.SetActive (true);
         Spawn(GetRandomVectorInMovementZone());
     }
 
