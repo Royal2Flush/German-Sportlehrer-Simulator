@@ -77,12 +77,12 @@ public class Pupil : Person {
 
     protected override void UpdateHit()
     {
-        timerToStateChange -= Time.deltaTime;
-        if (timerToStateChange < 0)
-        {
-            SetIdleTimer();
-            state = PersonState.idle;
-        }
+        //timerToStateChange -= Time.deltaTime;
+        //if (timerToStateChange < 0)
+        //{
+            //SetIdleTimer();
+            //state = PersonState.idle;
+        //}
         
     }
 
