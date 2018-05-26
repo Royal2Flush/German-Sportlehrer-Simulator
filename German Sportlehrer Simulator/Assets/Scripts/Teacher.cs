@@ -13,6 +13,9 @@ public class Teacher : MonoBehaviour {
 	// Path ball stuf
 	public GameObject PathBall;
 	private float lastPathSpawn = 0.0f;
+	private Animator animator;
+
+	private bool isPlayingAnimation = false;
 
     Rigidbody ballRigid;
 
@@ -20,10 +23,7 @@ public class Teacher : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
-
-
-		
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -57,6 +57,9 @@ public class Teacher : MonoBehaviour {
         if (Input.GetMouseButtonUp(0))
         {
             //throw ball
+			animator.SetTrigger ("IsThrowing");
+			isPlayingAnimation = false;
+
             GameObject ThrowBall = Resources.Load<GameObject>("throwBall") as GameObject;
             ThrowBall.transform.position = ball.transform.position;
             ThrowBall.transform.rotation = transform.rotation;
@@ -87,6 +90,10 @@ public class Teacher : MonoBehaviour {
         {
             throwIntensity += 0.1f;
 
+			if (!isPlayingAnimation) {
+				animator.SetTrigger ("IsAiming");
+				isPlayingAnimation = true;
+			}
         }
 
         else{

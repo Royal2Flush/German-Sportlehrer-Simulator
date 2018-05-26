@@ -24,10 +24,12 @@ public class Pupil : Person {
 
         if (state == PersonState.sleeping)
         {
+			animator.SetTrigger ("GotHit");
 			UIManager.Instance.AddPoints (damage);
         }
         else
         {
+			animator.SetTrigger ("GotHit");
 			UIManager.Instance.AddPoints (-1);
         }
 

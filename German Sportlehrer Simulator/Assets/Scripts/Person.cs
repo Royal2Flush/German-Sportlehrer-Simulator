@@ -8,6 +8,7 @@ public abstract class Person : MonoBehaviour {
 
     protected PersonState state;
     protected float timerToStateChange;
+	protected Animator animator;
     private Vector3 currentGoal;
     private float currentMovementSpeed;
 
@@ -17,6 +18,7 @@ public abstract class Person : MonoBehaviour {
         state = PersonState.idle;
         currentGoal = gameObject.transform.position;
         currentMovementSpeed = 0f;
+		animator = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame

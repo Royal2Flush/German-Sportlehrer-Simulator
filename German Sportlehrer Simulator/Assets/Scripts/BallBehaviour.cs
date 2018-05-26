@@ -6,7 +6,6 @@ public class BallBehaviour : MonoBehaviour {
 
 	private float timeOfFloorBounce = 0.0f;
 	private bool touchedWall = false;
-	private bool isOnFloor = false;
 
 	// Use this for initialization
 	void Start () {
@@ -39,16 +38,12 @@ public class BallBehaviour : MonoBehaviour {
 			}
 
 			if (Time.time - timeOfFloorBounce > 1.0f) {
-				isOnFloor = true;
+				this.gameObject.tag = "Untagged";
 			}
 		}
 	}
 
 	public int getDamage() {
-
-		if (isOnFloor) {
-			return 0;
-		}
 
 		if (touchedWall) {
 			return 2;
