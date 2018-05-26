@@ -91,8 +91,13 @@ public class Pupil : Person {
         timerToStateChange = Random.Range(IDLE_MIN, IDLE_MAX);
     }
 
+    public override void Spawn()
+    {
+        Spawn(GetRandomVectorInMovementZone());
+    }
 
-	void playPupilAudio()
+
+    void playPupilAudio()
     {
         Debug.Log("getroffen");
         pupilAudio = this.GetComponent<AudioSource>();

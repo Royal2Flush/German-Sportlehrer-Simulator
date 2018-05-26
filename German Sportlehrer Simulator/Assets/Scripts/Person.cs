@@ -12,17 +12,10 @@ public abstract class Person : MonoBehaviour {
     private Vector3 currentGoal;
     private float currentMovementSpeed;
 
-	// Use this for initialization
-	void Start ()
-    {
-        state = PersonState.idle;
-        currentGoal = gameObject.transform.position;
-        currentMovementSpeed = 0f;
-		animator = GetComponent<Animator> ();
-	}
-	
-	// Update is called once per frame
-	void Update ()
+    
+
+    // Update is called once per frame
+    void Update ()
     {
         switch (state)
         {
@@ -63,7 +56,18 @@ public abstract class Person : MonoBehaviour {
 
     public void SetMovementGoalAtRandom(float speed)
     {
-        SetMovementGoal(new Vector3(Random.Range(-5f, 5f), transform.position.y, Random.Range(0f, 5f)), speed);
+        SetMovementGoal(GetRandomVectorInMovementZone(), speed);
+    }
+
+    protected static Vector3 GetRandomVectorInMovementZone()
+    {
+        const float X_MIN = -5;
+        const float X_MAX = 5;
+        const float Y_MIN = -5;
+        const float Y_MAX = 5;
+        const float Z_POS = 1;
+        Vector3 r = new Vector3(Random.Range(X_MIN, X_MAX), Random.Range(Y_MIN, Y_MAX), Z_POS);
+        return r;
     }
 
     protected void Move()
@@ -86,4 +90,15 @@ public abstract class Person : MonoBehaviour {
 			OnHit (damage);
 		}
 	}
+
+    public void Spawn(Vector3 position)
+    {
+        gameObject.transform.position = position;
+        state = PersonState.idle;
+        currentGoal = gameObject.transform.position;
+        currentMovementSpeed = 0f;
+        animator = GetComponent<Animator>();
+    }
+
+    public abstract void Spawn();
 }
