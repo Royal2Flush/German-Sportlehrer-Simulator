@@ -1,0 +1,596 @@
+fileFormatVersion: 2
+guid: 57bc521509e09884e86927750b9bc6c1
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: 9 point line
+    100002: 9 point line 03
+    100004: 9 point line 2
+    100006: 9 point line01
+    100008: backboard bumper05
+    100010: backboard bumper06
+    100012: backboard bumper07
+    100014: backboard bumper08
+    100016: Basket
+    100018: Basket01
+    100020: Basket02
+    100022: Basket03
+    100024: Basketball Court
+    100026: Basketball Court01
+    100028: Basketball net04
+    100030: Basketball net05
+    100032: Basketball net06
+    100034: Basketball net07
+    100036: Box336
+    100038: Box337
+    100040: Box338
+    100042: Box341
+    100044: Box345
+    100046: Box346
+    100048: Box347
+    100050: Box348
+    100052: Box349
+    100054: Box350
+    100056: Box593
+    100058: Box594
+    100060: Box595
+    100062: Box596
+    100064: Box597
+    100066: Box598
+    100068: Box599
+    100070: Box600
+    100072: Box601
+    100074: Box602
+    100076: Camera
+    100078: Camera01
+    100080: Camera01.Target
+    100082: Camera02
+    100084: Camera02.Target
+    100086: Door_D
+    100088: Door_DD
+    100090: Door_DD06
+    100092: Door_DD07
+    100094: Door_DD1
+    100096: Door_DD2
+    100098: floor
+    100100: floor01
+    100102: free trow line01
+    100104: free trow line02
+    100106: free trow line03
+    100108: free trow line04
+    100110: //RootNode
+    100112: Gym_Floor
+    100114: Inside Circle
+    100116: Inside Circle01
+    100118: Lamp
+    100120: Line46
+    100122: Line47
+    100124: Line48
+    100126: Line49
+    100128: Line50
+    100130: Line51
+    100132: Line52
+    100134: Line53
+    100136: Line54
+    100138: Line55
+    100140: Line56
+    100142: Line57
+    100144: Line58
+    100146: Line59
+    100148: Line60
+    100150: Line61
+    100152: Line62
+    100154: Line63
+    100156: Line64
+    100158: Line65
+    100160: Line66
+    100162: Line67
+    100164: Line68
+    100166: Line69
+    100168: Line70
+    100170: Line71
+    100172: Line72
+    100174: Line73
+    100176: Line74
+    100178: Line75
+    100180: Line76
+    100182: Line77
+    100184: Line78
+    100186: Line79
+    100188: Line80
+    100190: Line81
+    100192: outside circle
+    100194: outside circle01
+    100196: Rectangle26
+    100198: Rectangle32
+    100200: Rectangle33
+    100202: Rectangle34
+    100204: Seats
+    100206: Seats01
+    100208: side lines
+    100210: side lines01
+    100212: Stage
+    100214: Wall_Back
+    100216: Wall_Main
+    400000: 9 point line
+    400002: 9 point line 03
+    400004: 9 point line 2
+    400006: 9 point line01
+    400008: backboard bumper05
+    400010: backboard bumper06
+    400012: backboard bumper07
+    400014: backboard bumper08
+    400016: Basket
+    400018: Basket01
+    400020: Basket02
+    400022: Basket03
+    400024: Basketball Court
+    400026: Basketball Court01
+    400028: Basketball net04
+    400030: Basketball net05
+    400032: Basketball net06
+    400034: Basketball net07
+    400036: Box336
+    400038: Box337
+    400040: Box338
+    400042: Box341
+    400044: Box345
+    400046: Box346
+    400048: Box347
+    400050: Box348
+    400052: Box349
+    400054: Box350
+    400056: Box593
+    400058: Box594
+    400060: Box595
+    400062: Box596
+    400064: Box597
+    400066: Box598
+    400068: Box599
+    400070: Box600
+    400072: Box601
+    400074: Box602
+    400076: Camera
+    400078: Camera01
+    400080: Camera01.Target
+    400082: Camera02
+    400084: Camera02.Target
+    400086: Door_D
+    400088: Door_DD
+    400090: Door_DD06
+    400092: Door_DD07
+    400094: Door_DD1
+    400096: Door_DD2
+    400098: floor
+    400100: floor01
+    400102: free trow line01
+    400104: free trow line02
+    400106: free trow line03
+    400108: free trow line04
+    400110: //RootNode
+    400112: Gym_Floor
+    400114: Inside Circle
+    400116: Inside Circle01
+    400118: Lamp
+    400120: Line46
+    400122: Line47
+    400124: Line48
+    400126: Line49
+    400128: Line50
+    400130: Line51
+    400132: Line52
+    400134: Line53
+    400136: Line54
+    400138: Line55
+    400140: Line56
+    400142: Line57
+    400144: Line58
+    400146: Line59
+    400148: Line60
+    400150: Line61
+    400152: Line62
+    400154: Line63
+    400156: Line64
+    400158: Line65
+    400160: Line66
+    400162: Line67
+    400164: Line68
+    400166: Line69
+    400168: Line70
+    400170: Line71
+    400172: Line72
+    400174: Line73
+    400176: Line74
+    400178: Line75
+    400180: Line76
+    400182: Line77
+    400184: Line78
+    400186: Line79
+    400188: Line80
+    400190: Line81
+    400192: outside circle
+    400194: outside circle01
+    400196: Rectangle26
+    400198: Rectangle32
+    400200: Rectangle33
+    400202: Rectangle34
+    400204: Seats
+    400206: Seats01
+    400208: side lines
+    400210: side lines01
+    400212: Stage
+    400214: Wall_Back
+    400216: Wall_Main
+    2000000: Camera
+    2100000: Doors
+    2100002: Glass
+    2100004: Floor
+    2100006: lines
+    2100008: Metal
+    2100010: Hoop Support
+    2100012: Hoop Border
+    2100014: Clear Hoop Board
+    2100016: basketball net
+    2100018: Metal Rod
+    2100020: Floor_Main
+    2100022: 8 - Default
+    2100024: 8 - Default.001
+    2100026: Wall
+    2300000: 9 point line
+    2300002: 9 point line 03
+    2300004: 9 point line 2
+    2300006: 9 point line01
+    2300008: backboard bumper05
+    2300010: backboard bumper06
+    2300012: backboard bumper07
+    2300014: backboard bumper08
+    2300016: Box336
+    2300018: Box337
+    2300020: Box338
+    2300022: Box341
+    2300024: Box345
+    2300026: Box346
+    2300028: Box347
+    2300030: Box348
+    2300032: Box349
+    2300034: Box350
+    2300036: Box593
+    2300038: Box594
+    2300040: Box595
+    2300042: Box596
+    2300044: Box597
+    2300046: Box598
+    2300048: Box599
+    2300050: Box600
+    2300052: Box601
+    2300054: Box602
+    2300056: Door_D
+    2300058: Door_DD
+    2300060: Door_DD06
+    2300062: Door_DD07
+    2300064: Door_DD1
+    2300066: Door_DD2
+    2300068: floor
+    2300070: floor01
+    2300072: free trow line01
+    2300074: free trow line02
+    2300076: free trow line03
+    2300078: free trow line04
+    2300080: Gym_Floor
+    2300082: Inside Circle
+    2300084: Inside Circle01
+    2300086: Line46
+    2300088: Line47
+    2300090: Line48
+    2300092: Line49
+    2300094: Line50
+    2300096: Line51
+    2300098: Line52
+    2300100: Line53
+    2300102: Line54
+    2300104: Line55
+    2300106: Line56
+    2300108: Line57
+    2300110: Line58
+    2300112: Line59
+    2300114: Line60
+    2300116: Line61
+    2300118: Line62
+    2300120: Line63
+    2300122: Line64
+    2300124: Line65
+    2300126: Line66
+    2300128: Line67
+    2300130: Line68
+    2300132: Line69
+    2300134: Line70
+    2300136: Line71
+    2300138: Line72
+    2300140: Line73
+    2300142: Line74
+    2300144: Line75
+    2300146: Line76
+    2300148: Line77
+    2300150: Line78
+    2300152: Line79
+    2300154: Line80
+    2300156: Line81
+    2300158: outside circle
+    2300160: outside circle01
+    2300162: Rectangle26
+    2300164: Rectangle32
+    2300166: Rectangle33
+    2300168: Rectangle34
+    2300170: Seats
+    2300172: Seats01
+    2300174: side lines
+    2300176: side lines01
+    2300178: Stage
+    2300180: Wall_Back
+    2300182: Wall_Main
+    3300000: 9 point line
+    3300002: 9 point line 03
+    3300004: 9 point line 2
+    3300006: 9 point line01
+    3300008: backboard bumper05
+    3300010: backboard bumper06
+    3300012: backboard bumper07
+    3300014: backboard bumper08
+    3300016: Box336
+    3300018: Box337
+    3300020: Box338
+    3300022: Box341
+    3300024: Box345
+    3300026: Box346
+    3300028: Box347
+    3300030: Box348
+    3300032: Box349
+    3300034: Box350
+    3300036: Box593
+    3300038: Box594
+    3300040: Box595
+    3300042: Box596
+    3300044: Box597
+    3300046: Box598
+    3300048: Box599
+    3300050: Box600
+    3300052: Box601
+    3300054: Box602
+    3300056: Door_D
+    3300058: Door_DD
+    3300060: Door_DD06
+    3300062: Door_DD07
+    3300064: Door_DD1
+    3300066: Door_DD2
+    3300068: floor
+    3300070: floor01
+    3300072: free trow line01
+    3300074: free trow line02
+    3300076: free trow line03
+    3300078: free trow line04
+    3300080: Gym_Floor
+    3300082: Inside Circle
+    3300084: Inside Circle01
+    3300086: Line46
+    3300088: Line47
+    3300090: Line48
+    3300092: Line49
+    3300094: Line50
+    3300096: Line51
+    3300098: Line52
+    3300100: Line53
+    3300102: Line54
+    3300104: Line55
+    3300106: Line56
+    3300108: Line57
+    3300110: Line58
+    3300112: Line59
+    3300114: Line60
+    3300116: Line61
+    3300118: Line62
+    3300120: Line63
+    3300122: Line64
+    3300124: Line65
+    3300126: Line66
+    3300128: Line67
+    3300130: Line68
+    3300132: Line69
+    3300134: Line70
+    3300136: Line71
+    3300138: Line72
+    3300140: Line73
+    3300142: Line74
+    3300144: Line75
+    3300146: Line76
+    3300148: Line77
+    3300150: Line78
+    3300152: Line79
+    3300154: Line80
+    3300156: Line81
+    3300158: outside circle
+    3300160: outside circle01
+    3300162: Rectangle26
+    3300164: Rectangle32
+    3300166: Rectangle33
+    3300168: Rectangle34
+    3300170: Seats
+    3300172: Seats01
+    3300174: side lines
+    3300176: side lines01
+    3300178: Stage
+    3300180: Wall_Back
+    3300182: Wall_Main
+    4300000: Door_DD07
+    4300002: Door_DD06
+    4300004: floor01
+    4300006: free trow line04
+    4300008: free trow line03
+    4300010: Box602
+    4300012: backboard bumper08
+    4300014: Box601
+    4300016: Box600
+    4300018: Box599
+    4300020: Rectangle34
+    4300022: Box598
+    4300024: Line81
+    4300026: Line80
+    4300028: Line79
+    4300030: Line78
+    4300032: Line77
+    4300034: Line76
+    4300036: Line75
+    4300038: Line74
+    4300040: Line73
+    4300042: Inside Circle01
+    4300044: 9 point line 03
+    4300046: outside circle01
+    4300048: 9 point line01
+    4300050: side lines01
+    4300052: Box597
+    4300054: backboard bumper07
+    4300056: Box596
+    4300058: Box595
+    4300060: Rectangle33
+    4300062: Box594
+    4300064: Line72
+    4300066: Line71
+    4300068: Line70
+    4300070: Line69
+    4300072: Line68
+    4300074: Line67
+    4300076: Line66
+    4300078: Line65
+    4300080: Line64
+    4300082: Box593
+    4300084: Seats01
+    4300086: Seats
+    4300088: floor
+    4300090: free trow line02
+    4300092: free trow line01
+    4300094: Box350
+    4300096: backboard bumper06
+    4300098: Box349
+    4300100: Box348
+    4300102: Rectangle32
+    4300104: Box347
+    4300106: Line63
+    4300108: Line62
+    4300110: Line61
+    4300112: Line60
+    4300114: Line59
+    4300116: Line58
+    4300118: Line57
+    4300120: Line56
+    4300122: Line55
+    4300124: Box346
+    4300126: Box336
+    4300128: backboard bumper05
+    4300130: Box345
+    4300132: Box337
+    4300134: Box338
+    4300136: Rectangle26
+    4300138: Box341
+    4300140: Line54
+    4300142: Line53
+    4300144: Line52
+    4300146: Line51
+    4300148: Line50
+    4300150: Line49
+    4300152: Line48
+    4300154: Line47
+    4300156: Line46
+    4300158: Inside Circle
+    4300160: 9 point line 2
+    4300162: outside circle
+    4300164: 9 point line
+    4300166: side lines
+    4300168: Gym_Floor
+    4300170: Door_D
+    4300172: Wall_Back
+    4300174: Stage
+    4300176: Wall_Main
+    4300178: Door_DD
+    4300180: Door_DD1
+    4300182: Door_DD2
+    10800000: Lamp
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

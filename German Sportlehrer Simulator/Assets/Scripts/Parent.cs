@@ -42,4 +42,9 @@ public class Parent : Person
     {
         throw new System.NotImplementedException();
     }
+
+    public override void Spawn()
+    {
+        throw new System.NotImplementedException();
+    }
 }
