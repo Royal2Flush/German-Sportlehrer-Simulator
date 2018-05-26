@@ -6,6 +6,7 @@ public class Pupil : Person {
 
     public static float hitCooldownTimer = 5f;
     public float movementSpeed;
+    private SpriteRenderer zzz;
     
     private const float IDLE_MIN = 0.5f;
     private const float IDLE_MAX = 2f;
@@ -60,6 +61,8 @@ public class Pupil : Person {
 				SetMovementGoalAtRandom (0);
 				state = PersonState.sleeping;
 				animator.SetTrigger ("IsSleeping");
+                zzz.gameObject.SetActive(true);
+                timerToStateChange = 10f;
 			}
 			Debug.Log (state);
         }
@@ -72,7 +75,14 @@ public class Pupil : Person {
 
     protected override void UpdateSleeping()
     {
-        
+        timerToStateChange -= Time.deltaTime;
+        if(timerToStateChange <= 0)
+        {
+            zzz.gameObject.SetActive(false);
+            SetMovementGoalAtRandom(movementSpeed);
+            state = PersonState.moving;
+            animator.SetTrigger("IsAwake");
+        }
     }
 
     protected override void UpdateHit()
@@ -97,6 +107,9 @@ public class Pupil : Person {
 		Debug.Log (index);
 		transform.GetChild (index).gameObject.SetActive (true);
         Spawn(GetRandomVectorInMovementZone());
+
+        zzz = gameObject.GetComponentInChildren<SpriteRenderer>();
+        zzz.gameObject.SetActive(false);
     }
 
 

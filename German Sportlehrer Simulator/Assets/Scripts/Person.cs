@@ -76,13 +76,23 @@ public abstract class Person : MonoBehaviour {
         if(state == PersonState.moving)
         {
             MoveInDirectionOnce(currentGoal - gameObject.transform.position, currentMovementSpeed);
-            if (Vector3.Distance(currentGoal, gameObject.transform.position) < currentMovementSpeed * Time.deltaTime)
+            if (Vector3.Distance(currentGoal, gameObject.transform.position) < currentMovementSpeed * Time.deltaTime || CheckOutOfBounds(gameObject.transform.position))
             {
-                gameObject.transform.position = currentGoal;
+                //gameObject.transform.position = currentGoal;
                 state = PersonState.idle;
                 SetIdleTimer();
             }
         }
+    }
+
+    private static bool CheckOutOfBounds(Vector3 vec)
+    {
+        const float X_MIN = -6;
+        const float X_MAX = 6;
+        const float Z_MIN = 0;
+        const float Z_MAX = 10;
+        return (vec.x < X_MIN || vec.x > X_MAX || vec.z < Z_MIN || vec.z > Z_MAX);
+
     }
 
 	void OnCollisionEnter(Collision col) {
