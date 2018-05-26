@@ -24,6 +24,8 @@ public class Pupil : Person {
 
 	public override void OnHit(int damage)
 	{
+		playPupilAudio();
+
 		if (damage == 0)
 		{
 			return;
@@ -79,16 +81,6 @@ public class Pupil : Person {
     {
         timerToStateChange = Random.Range(IDLE_MIN, IDLE_MAX);
     }
-
-
-	private void OnCollisionEnter(Collision collision)
-	{
-		if(collision.gameObject.tag == "Ball")
-        {
-            playPupilAudio();
-
-        }
-	}
 
 
 	void playPupilAudio()
