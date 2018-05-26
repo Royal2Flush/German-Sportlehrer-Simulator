@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Pupil : Person {
 
-    public static float hitCooldownTimer;
+    public static float hitCooldownTimer = 5f;
     public float movementSpeed;
-    private float timerToStateChange;
+    
     private const float IDLE_MIN = 0.5f;
     private const float IDLE_MAX = 2f;
 
