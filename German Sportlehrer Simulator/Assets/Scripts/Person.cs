@@ -39,7 +39,7 @@ public abstract class Person : MonoBehaviour {
         }
     }
 
-    public abstract void OnHit();
+	public abstract void OnHit(int damage);
     protected abstract void SpecificUpdate();
     protected abstract void UpdateIdle();
     protected abstract void UpdateMoving();
@@ -77,4 +77,11 @@ public abstract class Person : MonoBehaviour {
             }
         }
     }
+
+	void OnCollisionEnter(Collision col) {
+		if (col.gameObject.tag == "Ball") {
+			int damage = col.gameObject.GetComponent<BallBehaviour> ().getDamage ();
+			OnHit (damage);
+		}
+	}
 }
