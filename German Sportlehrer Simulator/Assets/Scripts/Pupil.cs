@@ -17,21 +17,18 @@ public class Pupil : Person {
 
 	public override void OnHit(int damage)
 	{
-		Debug.Log (damage);
-
-		if (damage == 0) {
+		if (damage == 0)
+		{
 			return;
 		}
 
-		UIManager.Instance.AddPoints (damage);
-
         if (state == PersonState.sleeping)
         {
-            Debug.Log("+1 point");
+			UIManager.Instance.AddPoints (damage);
         }
         else
         {
-            Debug.Log("-1 point");
+			UIManager.Instance.AddPoints (-1);
         }
 
         state = PersonState.hit;
