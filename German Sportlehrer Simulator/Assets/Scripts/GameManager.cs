@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour {
         timeSinceLastSpawn += Time.deltaTime;
 		if(timeSinceLastSpawn >= timeToNewSpawn)
         {
+			Debug.Log ("Spawn");
             SpawnNewPupil();
         }
 	}
